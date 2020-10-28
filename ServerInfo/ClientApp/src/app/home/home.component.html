@@ -1,0 +1,37 @@
+
+<div>
+
+  <div class="row">
+    <div tabindex="0" class="e-card col-md-6" *ngFor="let group of serverGroups">
+
+      <div class="e-card-header">
+        <div class="e-card-header-caption">
+          <div class="e-card-title">{{group.groupname}}</div>
+        </div>
+      </div>
+
+      <div class="e-card-content">
+        <div *ngFor="let server of group.servers">
+          <ul class="row">
+            <li class="col-md-6">
+              {{server.ip}}
+            </li>
+            <div class="col-md-6">
+              <button class="btn-primary" (click)="onExecute(server.ip)">Execute</button>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div tabindex="0" class="e-card col-md-4" *ngIf="serverInfo.isClicked">
+        <div>Group name: {{serverInfo.groupname}}</div>
+        <div>Path at server: {{serverInfo.pathatserver}}</div>
+        <div>IP: {{serverInfo.ip}}</div>
+      </div>
+  </div>
+   
+</div>

@@ -1,0 +1,16 @@
+.e-card {
+  background-color: #E8EEEE;
+ margin-bottom: 10px;
+}
+
+.e-card-content {
+  font-size: medium;
+}
+
+.btn-primary {
+  border-radius: 4px;
+  cursor: pointer;
+  }
+
+
+
